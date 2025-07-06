@@ -1,0 +1,28 @@
+services:
+  website:
+    container_name: website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - cloudflared
+    ports:
+      - "3000:3000"
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${TOKEN}
+    environment:
+      - TZ=US/Eastern
+      - TOKEN=${TOKEN}
+    networks:
+      - cloudflared
+    depends_on:
+      - website
+
+networks:
+  cloudflared:
+    name: cloudflared
+    driver: bridge
