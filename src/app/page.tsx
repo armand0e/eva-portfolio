@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,7 @@ export default function Home() {
           transition={{ duration: 0.8, staggerChildren: 0.2 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-serif tracking-tight"
+            className="text-5xl md:text-7xl font-serif tracking-tight text-[oklch(0.65_0.12_200)]"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -31,7 +32,7 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            a social media manager & content creator who enjoys crafting engaging experiences for ambitious B2B and B2C brands.
+            a <span className="text-[oklch(0.65_0.12_200)]">social media manager</span> & <span className="text-[oklch(0.65_0.12_200)]">content creator</span> who enjoys crafting engaging experiences for ambitious B2B and B2C brands.
           </motion.p>
           
           <motion.div 
@@ -45,7 +46,7 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button asChild className="rounded-none bg-primary hover:bg-primary/90 px-8 py-6 text-lg font-medium">
+              <Button asChild className="rounded-none bg-primary hover:bg-[oklch(0.85_0.15_88)] px-8 py-6 text-lg font-medium transition-all duration-300">
                 <Link href="/contact">
                   GET IN TOUCH
                 </Link>
@@ -58,7 +59,7 @@ export default function Home() {
             >
               <Link
                 href="/portfolio"
-                className="inline-flex items-center text-foreground font-medium text-lg hover:underline group"
+                className="inline-flex items-center text-foreground font-medium text-lg hover:underline group hover:text-[oklch(0.65_0.12_200)] transition-colors duration-300"
               >
                 Check out my work
                 <motion.svg 
@@ -99,40 +100,26 @@ export default function Home() {
             scale: 1.02
           }}
         >
-          <div className="bg-white dark:bg-gray-900 rounded-sm shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] transition-all duration-500 p-4">
+          <div className="bg-card border border-border shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] transition-all duration-500 p-4 rounded-sm">
             <motion.div 
-              className="aspect-[3/4] bg-gradient-to-br from-stone-100 via-neutral-100 to-gray-100 dark:from-stone-800 dark:via-neutral-800 dark:to-gray-800 rounded-sm overflow-hidden relative"
+              className="aspect-[3/4] bg-gradient-to-br from-muted via-secondary/30 to-accent/20 rounded-sm overflow-hidden relative"
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.4 }}
             >
-              {/* Portrait placeholder */}
-              <div className="w-full h-full bg-gradient-to-br from-stone-200/70 via-neutral-200/70 to-gray-200/70 dark:from-stone-700/70 dark:via-neutral-700/70 dark:to-gray-700/70 flex items-center justify-center relative">
-                <motion.div
-                  className="w-24 h-24 opacity-30"
-                  animate={{ 
-                    y: [0, -8, 0],
-                    rotate: [0, 2, -2, 0] 
-                  }}
-                  transition={{ 
-                    duration: 8,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <svg 
-                    viewBox="0 0 24 24" 
-                    fill="currentColor" 
-                    className="w-full h-full text-gray-400 dark:text-gray-500"
-                  >
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </motion.div>
+              {/* Portrait Image */}
+              <div className="w-full h-full relative">
+                <Image
+                  src="/portrait.jpg"
+                  alt="Eva Alonso - Social Media Manager & Content Creator"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover object-center"
+                  priority
+                />
                 
-                {/* Subtle overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-white/5 dark:from-black/20 dark:to-white/5"></div>
-                
-                {/* Professional frame inner border */}
-                <div className="absolute inset-2 border border-white/20 dark:border-gray-600/20 rounded-sm"></div>
+                {/* Subtle overlay for depth and professional frame */}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/5 via-transparent to-background/5"></div>
+                <div className="absolute inset-2 border border-border/20 rounded-sm pointer-events-none"></div>
               </div>
             </motion.div>
           </div>
