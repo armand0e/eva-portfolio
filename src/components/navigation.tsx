@@ -17,7 +17,7 @@ export function Navigation() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex justify-between items-center py-6 px-8 md:px-16"
+      className="flex justify-between items-center py-4 md:py-6 px-4 md:px-8 lg:px-16"
     >
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -29,7 +29,7 @@ export function Navigation() {
       </motion.div>
       
       <NavigationMenu>
-        <NavigationMenuList className="hidden md:flex gap-8">
+        <NavigationMenuList className="hidden lg:flex gap-4 xl:gap-8">
           <NavigationMenuItem>
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <NavigationMenuLink asChild>
@@ -67,9 +67,49 @@ export function Navigation() {
             </motion.div>
           </NavigationMenuItem>
         </NavigationMenuList>
+        
+        {/* Medium screen navigation */}
+        <NavigationMenuList className="hidden md:flex lg:hidden gap-2">
+          <NavigationMenuItem>
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <NavigationMenuLink asChild>
+                <Link href="/social-media" className="text-xs font-medium text-primary hover:text-[oklch(0.85_0.15_88)] transition-colors">
+                  SOCIAL MEDIA
+                </Link>
+              </NavigationMenuLink>
+            </motion.div>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <NavigationMenuLink asChild>
+                <Link href="/content" className="text-xs font-medium text-primary hover:text-[oklch(0.85_0.15_88)] transition-colors">
+                  CONTENT
+                </Link>
+              </NavigationMenuLink>
+            </motion.div>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <NavigationMenuLink asChild>
+                <Link href="/portfolio" className="text-xs font-medium text-primary hover:text-[oklch(0.85_0.15_88)] transition-colors">
+                  PORTFOLIO
+                </Link>
+              </NavigationMenuLink>
+            </motion.div>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <NavigationMenuLink asChild>
+                <Link href="/about" className="text-xs font-medium text-primary hover:text-[oklch(0.85_0.15_88)] transition-colors">
+                  ABOUT
+                </Link>
+              </NavigationMenuLink>
+            </motion.div>
+          </NavigationMenuItem>
+        </NavigationMenuList>
       </NavigationMenu>
       
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-2 md:gap-4 items-center">
         <motion.div whileHover={{ scale: 1.2, rotate: 5 }} transition={{ duration: 0.2 }}>
           <Link
             href="https://www.instagram.com/eva_alonso1?igsh=MWM2YjB6NDgzdnlwcw%3D%3D&utm_source=qr"

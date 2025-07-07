@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
@@ -9,10 +10,9 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
-      <main className="flex-1 flex flex-col justify-center px-8 md:px-16 py-12 md:py-24 max-w-7xl mx-auto w-full">
+      <main className="flex-1 flex flex-col lg:flex-row justify-center items-start px-8 md:px-16 py-12 md:py-24 max-w-7xl mx-auto w-full gap-12">
         <motion.div 
-          className="space-y-8 md:space-y-16"
+          className="space-y-8 md:space-y-16 lg:w-2/3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, staggerChildren: 0.2 }}
@@ -87,6 +87,42 @@ export default function Home() {
               </Link>
             </motion.div>
           </motion.div>
+        </motion.div>
+
+        {/* Floating Portfolio Picture Card */}
+        <motion.div
+          className="lg:w-1/3 w-full max-w-sm mx-auto lg:mx-0 lg:sticky lg:top-24"
+          initial={{ x: 100, opacity: 0, scale: 0.8 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+          whileHover={{ 
+            y: -8, 
+            scale: 1.02
+          }}
+        >
+          <div className="bg-card border border-border shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] transition-all duration-500 p-4 rounded-sm">
+            <motion.div 
+              className="aspect-[3/4] bg-gradient-to-br from-muted via-secondary/30 to-accent/20 rounded-sm overflow-hidden relative"
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.4 }}
+            >
+              {/* Portrait Image */}
+              <div className="w-full h-full relative">
+                <Image
+                  src="/portrait.jpg"
+                  alt="Eva Alonso - Social Media Manager & Content Creator"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover object-center"
+                  priority
+                />
+                
+                {/* Subtle overlay for depth and professional frame */}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/5 via-transparent to-background/5"></div>
+                <div className="absolute inset-2 border border-border/20 rounded-sm pointer-events-none"></div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </main>
     </div>
