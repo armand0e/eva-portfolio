@@ -46,71 +46,99 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.98 0.02 90);  /* Cream/beige background */
-  --foreground: oklch(0.2 0.02 90);   /* Dark text */
-  --card: oklch(0.98 0.02 90);
-  --card-foreground: oklch(0.2 0.02 90);
-  --popover: oklch(0.98 0.02 90);
-  --popover-foreground: oklch(0.2 0.02 90);
-  --primary: oklch(0.85 0.08 65);     /* Peach accent color (#ffcea4) */
-  --primary-foreground: oklch(0.2 0.02 90);
-  --secondary: oklch(0.95 0.02 90);
-  --secondary-foreground: oklch(0.3 0.02 90);
-  --muted: oklch(0.95 0.02 90);
-  --muted-foreground: oklch(0.5 0.02 90);
-  --accent: oklch(0.95 0.02 90);
-  --accent-foreground: oklch(0.3 0.02 90);
+  /* Main cream background - #fffaf0 */
+  --background: oklch(0.975 0.015 80);
+  /* Dark gray text for readability */
+  --foreground: oklch(0.25 0.02 200);
+  /* Cream cards */
+  --card: oklch(0.975 0.015 80);
+  --card-foreground: oklch(0.25 0.02 200);
+  /* Cream popovers */
+  --popover: oklch(0.975 0.015 80);
+  --popover-foreground: oklch(0.25 0.02 200);
+  /* Dark gold primary - #d3af37 */
+  --primary: oklch(0.78 0.12 85);
+  --primary-foreground: oklch(0.975 0.015 80);
+  /* Light cyan secondary - #89deea */
+  --secondary: oklch(0.86 0.08 200);
+  --secondary-foreground: oklch(0.25 0.02 200);
+  /* Slightly darker cream for muted */
+  --muted: oklch(0.92 0.02 80);
+  --muted-foreground: oklch(0.55 0.04 200);
+  /* Light cyan accents */
+  --accent: oklch(0.86 0.08 200);
+  --accent-foreground: oklch(0.25 0.02 200);
+  /* Destructive red (keep existing) */
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.8 0.02 90);
-  --input: oklch(0.8 0.02 90);
-  --ring: oklch(0.85 0.08 65);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.98 0.02 90);
-  --sidebar-foreground: oklch(0.2 0.02 90);
-  --sidebar-primary: oklch(0.85 0.08 65);
-  --sidebar-primary-foreground: oklch(0.98 0.02 90);
-  --sidebar-accent: oklch(0.95 0.02 90);
-  --sidebar-accent-foreground: oklch(0.3 0.02 90);
-  --sidebar-border: oklch(0.8 0.02 90);
-  --sidebar-ring: oklch(0.85 0.08 65);
+  /* Light cyan borders */
+  --border: oklch(0.86 0.08 200);
+  /* Muted cream inputs */
+  --input: oklch(0.92 0.02 80);
+  /* Dark gold ring */
+  --ring: oklch(0.78 0.12 85);
+  /* Chart colors using the palette */
+  --chart-1: oklch(0.78 0.12 85);   /* Dark gold */
+  --chart-2: oklch(0.85 0.15 88);   /* Bright gold */
+  --chart-3: oklch(0.86 0.08 200);  /* Light cyan */
+  --chart-4: oklch(0.65 0.12 200);  /* Teal */
+  --chart-5: oklch(0.92 0.02 80);   /* Muted cream */
+  /* Sidebar using cream background */
+  --sidebar: oklch(0.975 0.015 80);
+  --sidebar-foreground: oklch(0.25 0.02 200);
+  --sidebar-primary: oklch(0.78 0.12 85);
+  --sidebar-primary-foreground: oklch(0.975 0.015 80);
+  --sidebar-accent: oklch(0.86 0.08 200);
+  --sidebar-accent-foreground: oklch(0.25 0.02 200);
+  --sidebar-border: oklch(0.86 0.08 200);
+  --sidebar-ring: oklch(0.78 0.12 85);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.85 0.08 65);     /* Peach accent color (#ffcea4) */
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Dark theme - darker teal background */
+  --background: oklch(0.25 0.08 200);
+  /* Cream foreground */
+  --foreground: oklch(0.975 0.015 80);
+  /* Darker teal cards */
+  --card: oklch(0.3 0.08 200);
+  --card-foreground: oklch(0.975 0.015 80);
+  /* Darker teal popovers */
+  --popover: oklch(0.3 0.08 200);
+  --popover-foreground: oklch(0.975 0.015 80);
+  /* Bright gold primary - #ffc125 */
+  --primary: oklch(0.85 0.15 88);
+  --primary-foreground: oklch(0.25 0.08 200);
+  /* Medium teal secondary */
+  --secondary: oklch(0.45 0.1 200);
+  --secondary-foreground: oklch(0.975 0.015 80);
+  /* Darker teal muted */
+  --muted: oklch(0.35 0.08 200);
+  --muted-foreground: oklch(0.8 0.02 80);
+  /* Medium teal accent */
+  --accent: oklch(0.45 0.1 200);
+  --accent-foreground: oklch(0.975 0.015 80);
+  /* Destructive (keep existing) */
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Dark borders */
+  --border: oklch(0.4 0.08 200);
+  /* Dark inputs */
+  --input: oklch(0.35 0.08 200);
+  /* Bright gold ring */
+  --ring: oklch(0.85 0.15 88);
+  /* Dark theme chart colors */
+  --chart-1: oklch(0.85 0.15 88);   /* Bright gold */
+  --chart-2: oklch(0.78 0.12 85);   /* Dark gold */
+  --chart-3: oklch(0.86 0.08 200);  /* Light cyan */
+  --chart-4: oklch(0.65 0.12 200);  /* Medium teal */
+  --chart-5: oklch(0.45 0.1 200);   /* Darker teal */
+  /* Dark sidebar */
+  --sidebar: oklch(0.3 0.08 200);
+  --sidebar-foreground: oklch(0.975 0.015 80);
+  --sidebar-primary: oklch(0.85 0.15 88);
+  --sidebar-primary-foreground: oklch(0.25 0.08 200);
+  --sidebar-accent: oklch(0.45 0.1 200);
+  --sidebar-accent-foreground: oklch(0.975 0.015 80);
+  --sidebar-border: oklch(0.4 0.08 200);
+  --sidebar-ring: oklch(0.85 0.15 88);
 }
 
 @layer base {
