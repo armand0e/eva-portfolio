@@ -18,7 +18,7 @@ export default function Home() {
           transition={{ duration: 0.8, staggerChildren: 0.2 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-serif tracking-tight"
+            className="text-5xl md:text-7xl font-serif tracking-tight text-primary"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -27,12 +27,12 @@ export default function Home() {
           </motion.h1>
           
           <motion.p 
-            className="text-3xl md:text-5xl font-serif leading-tight max-w-4xl"
+            className="text-3xl md:text-5xl font-serif leading-tight max-w-4xl text-foreground"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            a social media manager & content creator who enjoys crafting engaging experiences for ambitious B2B and B2C brands.
+            a <span className="text-primary font-medium">social media manager</span> & <span className="text-primary font-medium">content creator</span> who enjoys crafting engaging experiences for ambitious B2B and B2C brands.
           </motion.p>
           
           <motion.div 
@@ -46,7 +46,7 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button asChild className="rounded-none bg-primary hover:bg-primary/90 px-8 py-6 text-lg font-medium">
+              <Button asChild className="rounded-md bg-primary hover:bg-primary/90 px-8 py-6 text-lg font-medium transition-all duration-300">
                 <Link href="/contact">
                   GET IN TOUCH
                 </Link>
@@ -57,9 +57,9 @@ export default function Home() {
               whileHover={{ x: 10 }}
               transition={{ duration: 0.2 }}
             >
-              <Link 
-                href="/portfolio" 
-                className="inline-flex items-center text-foreground font-medium text-lg hover:underline group"
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center text-muted-foreground font-medium text-lg hover:text-primary hover:underline group transition-colors duration-300"
               >
                 Check out my work
                 <motion.svg 

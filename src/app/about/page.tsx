@@ -18,6 +18,35 @@ export default function AboutPage() {
           About Me
         </motion.h1>
         
+<<<<<<< Updated upstream
+=======
+        {/* Hero Quote Section */}
+        <motion.div
+          className="bg-gradient-to-r from-primary/5 to-secondary/10 rounded-lg p-8 mb-12 border border-border/50"
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <motion.blockquote 
+            className="text-xl md:text-2xl font-serif italic text-center"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            &ldquo;Creativity is intelligence having fun – and I believe every brand deserves to have fun while making an impact.&rdquo;
+          </motion.blockquote>
+          <motion.div 
+            className="text-center mt-4 text-sm text-muted-foreground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            — Eva Alonso
+          </motion.div>
+        </motion.div>
+        
+>>>>>>> Stashed changes
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-12"
           initial={{ opacity: 0 }}
@@ -56,10 +85,42 @@ export default function AboutPage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
+<<<<<<< Updated upstream
               Education
             </motion.h2>
             <motion.p 
               className="text-lg"
+=======
+              <motion.div 
+                className="flex items-center gap-3 mb-4"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-primary">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-serif">Education</h2>
+              </motion.div>
+              <motion.div 
+                className="space-y-2"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <p className="text-lg font-medium">University of Central Florida</p>
+                <p className="text-muted-foreground">Bachelor&apos;s in Advertising and Public Relations</p>
+                <p className="text-muted-foreground">Expected Graduation: May 2027</p>
+              </motion.div>
+            </motion.div>
+
+            {/* Experience Highlights */}
+            <motion.div
+              className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              whileHover={{ y: -2 }}
+>>>>>>> Stashed changes
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
