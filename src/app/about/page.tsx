@@ -32,7 +32,7 @@ export default function AboutPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            "Creativity is intelligence having fun – and I believe every brand deserves to have fun while making an impact."
+            &quot;Creativity is intelligence having fun – and I believe every brand deserves to have fun while making an impact.&quot;
           </motion.blockquote>
           <motion.div 
             className="text-center mt-4 text-sm text-muted-foreground"
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <p className="text-lg font-medium">University of Central Florida</p>
-                <p className="text-muted-foreground">Bachelor's in Advertising and Public Relations</p>
+                <p className="text-muted-foreground">Bachelor&apos;s in Advertising and Public Relations</p>
                 <p className="text-muted-foreground">Expected Graduation: May 2027</p>
               </motion.div>
             </motion.div>
