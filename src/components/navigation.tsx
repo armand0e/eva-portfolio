@@ -27,51 +27,53 @@ export function Navigation() {
           EVA ALONSO
         </Link>
       </motion.div>
-      
       <NavigationMenu>
         <NavigationMenuList className="hidden md:flex gap-8">
           <NavigationMenuItem>
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/social-media" legacyBehavior passHref>
-                <NavigationMenuLink className="text-sm font-medium tracking-wider">
+              <NavigationMenuLink asChild>
+                <Link href="/social-media" className="text-sm font-medium tracking-wider">
                   SOCIAL MEDIA MANAGEMENT
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </motion.div>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/content" legacyBehavior passHref>
-                <NavigationMenuLink className="text-sm font-medium tracking-wider">
+              <NavigationMenuLink asChild>
+                <Link href="/content" className="text-sm font-medium tracking-wider">
                   CONTENT STRATEGY & WRITING
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </motion.div>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/portfolio" legacyBehavior passHref>
-                <NavigationMenuLink className="text-sm font-medium tracking-wider">
+              <NavigationMenuLink asChild>
+                <Link href="/portfolio" className="text-sm font-medium tracking-wider">
                   PORTFOLIO
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </motion.div>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className="text-sm font-medium tracking-wider">
+              <NavigationMenuLink asChild>
+                <Link href="/about" className="text-sm font-medium tracking-wider">
                   ABOUT
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </motion.div>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      
       <div className="flex gap-4 items-center">
         <motion.div whileHover={{ scale: 1.2, rotate: 5 }} transition={{ duration: 0.2 }}>
-          <Link href="https://www.instagram.com/eva_alonso1?igsh=MWM2YjB6NDgzdnlwcw%3D%3D&utm_source=qr" aria-label="Instagram" className="h-5 w-5">
+          <Link
+            href="https://www.instagram.com/eva_alonso1?igsh=MWM2YjB6NDgzdnlwcw%3D%3D&utm_source=qr"
+            aria-label="Instagram"
+            className="h-5 w-5"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
               <title>Instagram</title>
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -82,7 +84,11 @@ export function Navigation() {
         </motion.div>
         
         <motion.div whileHover={{ scale: 1.2, rotate: -5 }} transition={{ duration: 0.2 }}>
-          <Link href="https://www.facebook.com/share/166mff5oCg/?mibextid=wwXIfr" aria-label="Facebook" className="h-5 w-5">
+          <Link
+            href="https://www.facebook.com/share/166mff5oCg/?mibextid=wwXIfr"
+            aria-label="Facebook"
+            className="h-5 w-5"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
               <title>Facebook</title>
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -91,7 +97,11 @@ export function Navigation() {
         </motion.div>
         
         <motion.div whileHover={{ scale: 1.2, rotate: 5 }} transition={{ duration: 0.2 }}>
-          <Link href="https://www.linkedin.com/in/eva-alonso-347582261/" aria-label="LinkedIn" className="h-5 w-5">
+          <Link
+            href="https://www.linkedin.com/in/eva-alonso-347582261/"
+            aria-label="LinkedIn"
+            className="h-5 w-5"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
               <title>LinkedIn</title>
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -102,7 +112,11 @@ export function Navigation() {
         </motion.div>
         
         <motion.div whileHover={{ scale: 1.2, rotate: -5 }} transition={{ duration: 0.2 }}>
-          <Link href="mailto:evaberlyn@icloud.com" aria-label="Email" className="h-5 w-5">
+          <Link
+            href="mailto:evaberlyn@icloud.com"
+            aria-label="Email"
+            className="h-5 w-5"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
               <title>Email</title>
               <rect width="20" height="16" x="2" y="4" rx="2" />
