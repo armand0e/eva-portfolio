@@ -14,7 +14,7 @@ export default function ContentStrategyPage() {
           <div className="space-y-6">
             <h2 className="text-2xl font-serif">Content That Converts</h2>
             <p className="text-lg">
-              Effective content strategy goes beyond just creating posts—it's about crafting narratives that resonate 
+              Effective content strategy goes beyond just creating posts—it&apos;s about crafting narratives that resonate 
               with your audience and drive meaningful engagement. With my background in advertising and public relations, 
               I develop content strategies that align with your business objectives while delivering value to your audience.
             </p>
@@ -75,7 +75,7 @@ export default function ContentStrategyPage() {
             <div className="bg-secondary p-8">
               <h3 className="text-xl font-serif mb-4">Why Quality Content Matters</h3>
               <p className="mb-4">
-                In today's digital landscape, content is the cornerstone of brand communication. Quality content:
+                In today&apos;s digital landscape, content is the cornerstone of brand communication. Quality content:
               </p>
               <ul className="list-disc list-inside space-y-2">
                 <li>Builds trust with your audience</li>

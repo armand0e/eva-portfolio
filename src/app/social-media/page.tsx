@@ -42,7 +42,7 @@ export default function SocialMediaPage() {
             <div className="bg-secondary p-8">
               <h3 className="text-xl font-serif mb-4">Case Study: Fetii Rideshare Solutions</h3>
               <p className="mb-4">
-                As the Social Media Manager for Fetii Rideshare Solutions, I've been responsible for:
+                As the Social Media Manager for Fetii Rideshare Solutions, I&apos;ve been responsible for:
               </p>
               <ul className="list-disc list-inside space-y-2">
                 <li>Increasing brand awareness on UCF campus through daily social media content</li>
