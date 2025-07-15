@@ -1,28 +1,28 @@
 services:
-  website:
-    container_name: website
+  eva-website:
+    container_name: eva-website
     build:
       context: .
       dockerfile: Dockerfile
     networks:
-      - cloudflared
+      - eva-cloudflared
 
     restart: always
 
-  cloudflared:
+  eva-cloudflared:
     image: cloudflare/cloudflared:latest
-    container_name: cloudflared
+    container_name: eva-cloudflared
     restart: always
     command: tunnel --no-autoupdate run --token ${TOKEN}
     environment:
       - TZ=US/Eastern
-      - TOKEN=${EVA_TOKEN}
+      - TOKEN=${TOKEN}
     networks:
-      - cloudflared
+      - eva-cloudflared
     depends_on:
-      - website
+      - eva-website
 
 networks:
-  cloudflared:
-    name: cloudflared
+  eva-cloudflared:
+    name: eva-cloudflared
     driver: bridge
