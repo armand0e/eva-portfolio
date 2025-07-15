@@ -16,7 +16,7 @@ services:
     command: tunnel --no-autoupdate run --token ${TOKEN}
     environment:
       - TZ=US/Eastern
-      - TOKEN=${TOKEN}
+      - TOKEN=${EVA_TOKEN}
     networks:
       - cloudflared
     depends_on:
