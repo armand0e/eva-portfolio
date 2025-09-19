@@ -1,28 +1,16 @@
 services:
-  eva-website:
-    container_name: eva-website
+  eva:
+    container_name: eva
     build:
       context: .
       dockerfile: Dockerfile
     networks:
-      - eva-cloudflared
-
+      - dokploy-network
+    ports:
+      - "3000:3000"
     restart: always
-
-  eva-cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: eva-cloudflared
-    restart: always
-    command: tunnel --no-autoupdate run --token ${TOKEN}
-    environment:
-      - TZ=US/Eastern
-      - TOKEN=${TOKEN}
-    networks:
-      - eva-cloudflared
-    depends_on:
-      - eva-website
 
 networks:
-  eva-cloudflared:
-    name: eva-cloudflared
-    driver: bridge
+  dokploy-network:
+    name: dokploy-network
+    external: true
